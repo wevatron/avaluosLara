@@ -6,7 +6,7 @@
 
 	{!! Form::open(['url' => 'foo/bar']) !!}
     <div class="row">
-    	<div class="form-group col">
+    	<div class="form-group col-sm-4">
     		{!! Form::label('procesador_id','Procesador', ['for'=>'procesador_id']) !!}
     		{!! Form::select('procesador_id', [
     			''=>'Ninguno elegido',
@@ -29,7 +29,7 @@
     			],null,['class'=>'form-control ', 'id'=>'procesador_id']) !!}
     	</div>
 
-    	<div class="form-group col">
+    	<div class="form-group col-sm-4">
     		{!! Form::label('ram_id','Ram', ['for'=>'ram_id']) !!}
     		{!! Form::select('ram_id', [
     			''=>'Ninguno elegido',
@@ -43,7 +43,7 @@
     			], null, ['id'=>'ram_id', 'class'=>'form-control']) !!}
     	</div>
 
-    	<div class="form-group col">
+    	<div class="form-group col-sm-4">
     		{!! Form::label('almacenamiento_id', 'Almacenamiento', ['for'=>'almacenamiento_id']) !!}
     		{!! Form::select('almacenamiento_id', [
     			''=>'Ninguno elegido',
@@ -60,7 +60,7 @@
     			], null, ['class'=>'form-control']) !!}	
     	</div>
 
-    	<div class="form-group col">
+    	<div class="form-group col-sm-4">
     		{!! Form::label('tamano_id', 'Tamaño', []) !!}
     		{!! Form::select('tamano_id', [
     			''=>'Ninguno elegido',
@@ -71,7 +71,7 @@
     			] , null, ['class'=>'form-control']) !!}
     	</div>
 
-    	<div class="form-group col">
+    	<div class="form-group col-sm-4">
     		 {!! Form::label('marca_id', 'Marca', []) !!} 
     		 {!! Form::select('marca_id',[
     		 	''=>'Ninguno elegido',
@@ -89,6 +89,85 @@
     			'50'=>'Otras'
     		 	], null, ['class'=>'form-control']) !!}
     	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('cargador_id', 'Cargador', []) !!}
+    		{!! Form::select('cargador_id', [
+    			''=>'Ninguno elegido',
+    			'0'=>'Sin pantalla touch',
+    			'300'=>'Con pantalla touch'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('unidad_id', 'Unidad optica', []) !!}
+    		{!! Form::select('unidad_id', [
+    			''=>'Ninguno elegido',
+    			'85'=>'Sin unidad',
+    			'150'=>'DVD/RW',
+    			'300'=>'BlueRay'	
+    			] , null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('camara_id', 'Camara Web', []) !!}
+    		{!! Form::select('camara_id', [
+    			''=>'Ninguno elegido',
+    			'0'=>'Con cámara web',
+    			'-200'=>'No tiene cámara web'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('touch_id', 'Pantalla touch', []) !!}
+    		{!! Form::select('touch_id', [
+    			''=>'Ninguno elegido',
+    			'150'=>'original',
+    			'80'=>'generico'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('estado_id', 'Estado del aparato', []) !!}
+    		{!! Form::select('estado_id', [
+    			''=>'Ninguno elegido',
+    			'0'=>'Bueno/Excelente',
+    			'-300'=>'Desgaste por uso moderado'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('bateria_id', 'Estado de la batería', []) !!}
+    		{!! Form::select('bateria_id', [
+    			'1'=>'Ningun problema',
+    			'0'=>'Batería no retiene carga',
+    			'0'=>'Cargador no sirve'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('puertos_id', 'Puertos o lectores de trajetas/discos', []) !!}
+    		{!! Form::select('puertos_id', [
+				''=>'Ninguno elegido',
+    			'0'=>'Ningun problema',
+    			'-300'=>'No reproduce discos/lector descompuesto'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+    	<div class="form-group col-sm-4">
+    		{!! Form::label('perifericos_id', 'Puertos perifericos dañados (mic,mouse,camara,etc)', []) !!}
+    		{!! Form::select('perifericos_id', [
+    			''=>'Ninguno elegido',
+           		'1'=>'Ningun problema',
+    			'0'=>'No funciona Wi-Fi',
+    			'0'=>'No funciona la cámara web o el microfono',
+    			'0'=>'No funciona el mouse/touchpad',
+    			'0'=>'No funciona teclado o teclas'
+    			], null, ['class'=>'form-control']) !!}
+    	</div>
+
+
     </div>
     <div class="d-flex">
     	{!! Form::submit('Guardar', ['class'=>'btn btn-primary ml-auto']) !!}
@@ -96,4 +175,15 @@
     
 	{!! Form::close() !!}
 
+    
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+       //$("#marca_id").val({!! $lap->id !!}) ;
+        
+
+
+    });
+
+</script>
 @endsection

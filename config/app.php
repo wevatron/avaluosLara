@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         //laravelcolective
         Collective\Html\HtmlServiceProvider::class,
+         Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 

@@ -12,17 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('lobby');
+    return view('login');
 });
 
-Route::get('laptops', function ()
-{
-	return view('forms.laptops');
 
+Route::resource("avaluos", "avaluosController");
+Route::resource("marcas", "MarcasController");
+Route::resource("pro", "ProsController");
+Route::resource("almacen", "AlmacenesController");
+Route::resource("ram", "RamsController");
+Route::resource("laptops", "LaptopsController");
+
+Route::get('asink', function(){
+
+	return view('laptops');
 });
 
-Route::get('allinone', function ()
-{
-	# code...
-	return view('forms.allinone');
-});
+Route::get ("marcasAjax", "MarcasController@nombreMarcaAjax");

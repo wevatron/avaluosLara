@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class avaluosCompu extends Model
+class Laptop extends Model
 {
     
-    protected $table = "avaluos",
+    protected $table = "t_equipos";
+      public $timestamps = false;
     protected $fillable = [
+        'id',
     	'marca',
     	'ram',
     	'almacenamiento',
